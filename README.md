@@ -1,2 +1,169 @@
-# value-added-services-libraries
-Interactive showcase of Dubai's public libraries using open government data from Dubai Culture &amp; Arts Authority. Encourages developers to build with Dubai Pulse register data.
+# Dubai Public Libraries Showcase
+
+A beautiful, interactive web application showcasing Dubai's public libraries managed by Dubai Culture & Arts Authority. This project demonstrates how to use open government register data to create engaging user experiences.
+
+## 🎯 Purpose
+
+This project serves as an example implementation of [Dubai Culture's Public Libraries Register](https://www.dubaipulse.gov.ae/organisation/dubai-culture/service/dubai-culture-registers), encouraging developers to utilize open government data in their applications and services.
+
+## 🔓 Request Access
+
+To request access to the full private repository, please email the Data Leader at **Mohammed.Maree@dubaiculture.ae**. Access will be provided based on relevance to ongoing work with Dubai Culture open data.
+
+## ✨ Features
+
+- **Interactive Cards View**: Glassmorphic cards displaying library information with custom illustrations
+- **Map View**: Interactive SVG map showing all library locations across Dubai
+- **Responsive Design**: Optimized for both desktop and mobile browsers (works as a web app on phones)
+- **Filter by Area**: Quick filtering to find libraries in specific neighborhoods
+- **Direct Integration**: Get directions via Google Maps and book spaces via Electronic Services
+- **TypeScript**: Fully typed for better developer experience
+
+## 🖼️ Screenshots
+
+### Map View
+A fully interactive map showing all Dubai Public Libraries, with location pins, operating hours, and direct navigation links.
+
+![Map View](https://github.com/user-attachments/assets/c12582a2-eead-48ff-a799-a74bab8eba6f)
+
+### Cards View
+A modern, glassmorphic layout displaying each library's details, directions, and booking links.
+
+![Cards View](https://github.com/user-attachments/assets/e7273327-286e-4ad3-acf2-296c157af661)
+
+
+## 📚 Libraries Included
+
+- Al Mankhool Library (Bur Dubai)
+- Al Rashidiya Library (Rashidiya)
+- Al Safa Art & Design Library (Al Safa)
+- Al Twar Library (Al Twar)
+- Hatta Public Library (Hatta Mountains)
+- Hor Al Anz Library (Hor Al Anz)
+- Umm Suqeim Library (Umm Suqeim)
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+ and npm
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/moa-kh-dubaiculture/dubai-culture-libraries-artifacts.git
+cd dubai-culture-libraries-artifacts
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+```
+
+The application will be available at `http://localhost:5173`
+
+### Build for Production
+
+```bash
+npm run build
+npm run preview
+```
+
+## 🛠 Tech Stack
+
+- **React 18** - UI framework
+- **TypeScript** - Type safety
+- **Vite** - Build tool and dev server
+- **Tailwind CSS** - Styling
+- **Lucide React** - Icons
+
+## 📱 Mobile Usage
+
+This web application works great on mobile browsers:
+- Open in Safari, Chrome, or any mobile browser
+- Add to home screen for app-like experience
+- Fully responsive design optimized for touch
+
+## 📊 Data Source
+
+All library data is sourced from the official Dubai Culture registers:
+**[Dubai Culture Public Libraries Register](https://www.dubaipulse.gov.ae/organisation/dubai-culture/service/dubai-culture-registers)**
+
+The register provides:
+- Library IDs
+- Locations (latitude/longitude)
+- Operating hours
+- Contact information
+
+## 🔧 Using Components in Your Project
+
+This repository is designed to help developers integrate Dubai library information into their own applications. You can reuse components from this project:
+
+### Reusing the Interactive Map
+
+The map component (`src/components/LibraryMap.tsx`) uses Leaflet and OpenStreetMap - no API keys required.
+
+**To integrate into your project:**
+1. Copy `src/components/LibraryMap.tsx`
+2. Copy `src/data/libraries.ts` and `src/types/library.ts`
+3. Install dependencies: `npm install leaflet react-leaflet @types/leaflet`
+4. Import and use: `<LibraryMap />`
+
+### Reusing the Card View
+
+The glassmorphic cards component (`src/components/LibraryGlassCards.tsx`) provides a beautiful visual display.
+
+**To integrate into your project:**
+1. Copy `src/components/LibraryGlassCards.tsx`
+2. Copy `src/data/libraries.ts` and `src/types/library.ts`
+3. Install dependencies: `npm install lucide-react`
+4. Import and use: `<LibraryGlassCards />`
+
+### Using Just the Data
+
+If you only need the library data without UI components:
+
+```typescript
+import { libraries } from './data/libraries';
+
+// Access all library information
+libraries.forEach(library => {
+  console.log(library.title, library.lat, library.lng);
+});
+```
+
+### Customizing for Your Needs
+
+- **Styling**: All components use Tailwind CSS - customize colors and styles easily
+- **Data**: Update `src/data/libraries.ts` with additional fields from the register
+- **Features**: Add filtering, search, or booking integration as needed
+
+**Note:** This is open source (MIT License) - feel free to modify, extend, and use in commercial projects. We encourage innovation with government open data!
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- **Dubai Culture & Arts Authority** for maintaining the public libraries and providing open data
+- **Dubai Pulse** for making government data accessible to developers
+- All contributors who help improve this project
+
+## 📞 Contact
+
+For questions about the libraries themselves:
+- 📧 info@dubaiculture.ae
+- 📞 80033222
+
+## 🔗 Useful Links
+
+- [Dubai Culture Website](https://www.dubaiculture.gov.ae)
+- [Dubai Pulse Open Data Portal](https://www.dubaipulse.gov.ae)
+- [Dubai Public Libraries](https://www.dubaiculture.gov.ae/en/attractions/libraries/)
+
+---
+
+**Built with ❤️ to promote the use of open government data**
